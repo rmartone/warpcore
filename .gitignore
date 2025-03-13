@@ -1,0 +1,17 @@
+# Build output
+node_modules
+dev-dist
+dist
+*.local
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Editor directories and files
+.vscode/*
+
+# Ignore the OSX directory garbage
+.DS_Store
+
+# Firebase configuration and environment files
+**/*.env

@@ -1,0 +1,62 @@
+{
+  "name": "@warp5/core",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "author": "Ray Martone <rmartone@gmail.com>",
+  "license": "MIT",
+  "description": "A collection of ESNext utilities.",
+  "files": [
+    "dist/"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "build": "npm run clean && npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "format": "prettier --write src/**",
+    "lint": "eslint ./src --ext .ts,.tsx --fix"
+  },
+  "dependencies": {
+    "hash-it": "^6.0.0",
+    "missionlog": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "esbuild-node-externals": "^1.18.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1"
+  },
+  "keywords": [
+    "utilities",
+    "es6",
+    "typescript",
+    "esm"
+  ],
+  "homepage": "https://github.com/rmartone/warpcoreg#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rmartone/warpcore"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
